@@ -1,0 +1,74 @@
+
+#search {
+    position: relative;
+    float: left;
+    width: 30px;
+    height: 30px;
+    
+    margin-top: 15px;
+}
+#label label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("images/search.png");
+    font-size: 0;
+    color: rgba(0, 0, 0, 0);
+    text-indent: -9999px;
+    cursor: pointer;
+}
+#label label:hover {
+    background: url("images/search.png") -30px
+}
+#label.active label {
+    background: url("images/search.png") -30px
+}
+#input {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 400px;
+    height: 30px;
+    z-index: 5;
+    overflow: hidden;
+}
+#input input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -450px;
+    width: 450px;
+    height: 100%;
+    margin: 0;
+    padding: 0 10px;
+    border: none;
+    background-color:#595959;
+    color: #fff;
+    font-size: 18px;
+    -webkit-backface-visibility: none;
+    -moz-backface-visibility: none;
+    -ms-backface-visibility: none;
+    backface-visibility: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-transition: left 0;
+    -moz-transition: left 0;
+    -ms-transition: left 0;
+    -o-transition: left 0;
+    transition: left 0;
+}
+#input input:focus {
+    outline: none
+}
+#input.focus {
+    z-index: 20
+}
+#input.focus input {
+    left: 0;
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    -ms-transition: left 0.3s;
+    -o-transition: left 0.3s;
+    transition: left 0.3s;
+}
